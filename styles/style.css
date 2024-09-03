@@ -1,0 +1,223 @@
+@import './normalize.css';
+:root {
+    --main-color:#1F2022;
+    --accent-color:#00adb5;
+    --poppins-fonts:"Poppins", sans-serif;
+    --montserrat-fonts:"Montserrat", sans-serif;
+    --josefin-sans:"Josefin Sans", sans-serif;
+    --container:1340px;
+    --color-white:#ffff;
+    --bg-color:rgb(158, 156, 156);
+}
+.container {
+    max-width: var(--container);
+    padding: 0 5px;
+    margin: 0 auto;
+}
+body {
+    background-color: var(--main-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* #region Header */
+.header {
+}
+.header__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 0;
+}
+.header__logo {
+    font-family: var(--josefin-sans);
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--color-white);
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.list__item {
+}
+.list__link {
+    font-family: var(--josefin-sans);
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--color-white);
+    transition: 0.7s;
+    position: relative;
+}
+.list__link::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -6px;
+    height: 2px;
+    background-color: var(--accent-color);
+    width: 100%;
+    transform: scaleX(0); 
+    transition: 0.7s;
+    transform-origin: bottom right;
+}
+
+.list__link:hover::before {
+    transform: scaleX(1); 
+    transform-origin: bottom left;
+}
+.list__link:hover, .list__link:focus {
+    color: var(--accent-color);
+}
+
+.accent-color {
+    color: var(--accent-color);
+}
+.nav__btn {
+    border-radius: 3px;
+    padding: 16px;
+    border: none;
+    background: var(--color-white);
+
+    font-family: var(--josefin-sans);
+    font-weight: 700;
+    font-size: 18px;
+    color: #000;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+.nav__btn:hover {
+    background-color: var(--accent-color);
+    color: var(--color-white);
+}
+/* #endregion Header */
+/* #region Wrapper-Section */
+.wrapper__section {
+    background-image: url(/Jessie-Photo/images/jessie.main.png);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position:center center ;
+    max-width:1200px;
+    height: 840px;
+}
+
+.wrapper__section {
+    display: flex;
+    gap: 350px;
+}
+.section__left {
+    padding: 400px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 290px;
+}
+.section__left-title {
+    font-family:var(--montserrat-fonts);
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 1.25;
+    letter-spacing: 0.04em;
+    color: var(--accent-color);
+    position: relative;
+    z-index: 1;
+}
+
+.section__left-title::before{
+    position: absolute;
+    content: '';
+    border-radius: 100%;
+    left: -12px;
+    top: -5px;
+    height: 20px;
+    width: 20px;
+    background-color: var(--bg-color);
+    z-index: -1;
+}
+.section__left-description {
+    font-family: var(--montserrat-fonts);
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 1.7;
+    color: var(--color-white);
+    width: 350px;
+    margin-left: 35px;
+    position: relative;
+}
+
+.section__left-description::before {
+    position: absolute;
+    content: '';
+    left: -35px;
+    top: 25%;
+    border: 3px solid var(--accent-color);
+    width: 20px;
+}
+.section__right {
+    padding: 150px 0;
+}
+.section__right-text {
+    font-family: var(--poppins-fonts);
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.04em;
+    color: var(--color-white);
+}
+.section__right-title {
+    font-family: var(--montserrat-fonts);
+    font-weight: 800;
+    font-size: 100px;
+    letter-spacing: 0.06em;
+    color: var(--accent-color);
+}
+.section__right-description {
+    font-family: var(--poppins-fonts);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.8;
+    letter-spacing: 0.04em;
+    color: var(--bg-color);
+    max-width: 550px;
+}
+.section__right-wrapper {
+    padding: 140px 0 0 0;
+}
+.section__right-name-phots {
+    display: inline-block;
+    font-family: var(--josefin-sans);
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--color-white);
+}
+.section__right-view-all {
+    margin-left: 312px;
+    display: inline-block;
+    font-family: var(--montserrat-fonts);
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    color: var(--accent-color);
+}
+.section__right-wrapper-images {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.section__right-img {
+}
+.left {
+    cursor: pointer;
+}
+.right {
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+/* #endregion Wrapper-Section */
